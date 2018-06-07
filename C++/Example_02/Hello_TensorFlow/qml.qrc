@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>resources/tensor_flow.jpg</file>
-    </qresource>
-</RCC>
