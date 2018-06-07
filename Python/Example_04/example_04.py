@@ -10,3 +10,8 @@ a = tf.constant(5)
 b = tf.constant(2)
 c = tf.constant(3)
 
+# Each of the next three nodes gets two existing variables as inputs, and performs simple arithmetic operations on them:
+d = tf.multiply(a, b)
+e = tf.add(c, b)
+f = tf.subtract(d, e)
+
