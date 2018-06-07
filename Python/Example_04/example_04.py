@@ -1,6 +1,5 @@
 import os
 import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
 
 # Resolves 'Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA' warning:
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -15,3 +14,8 @@ d = tf.multiply(a, b)
 e = tf.add(c, b)
 f = tf.subtract(d, e)
 
+# Creating session and running it:
+sess = tf.Session()
+outs = sess.run(f)
+sess.close()
+print("outs = {}".format(outs))
