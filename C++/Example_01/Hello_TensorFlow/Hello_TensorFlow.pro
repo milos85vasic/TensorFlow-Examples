@@ -30,9 +30,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 # Make sure that you place libtensorflow.so in libs direcotry and that -I points to the path where TensorFlow header files are located.
-LIBS += -L"$$_PRO_FILE_PWD_/libs/" -ltensorflow
+LIBS += -L"/Users/milosvasic/Projects/TensorFlow/bazel-bin/tensorflow/" -ltensorflow
 
-DEPENDPATH += /Users/milosvasic/Projects/Tensor-Flow/tensorflow
-INCLUDEPATH += /Users/milosvasic/Projects/Tensor-Flow/tensorflow
+DEPENDPATH += /Users/milosvasic/Projects/TensorFlow
+INCLUDEPATH += /Users/milosvasic/Projects/TensorFlow
 
 HEADERS += tensorclient.h
