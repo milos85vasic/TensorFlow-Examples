@@ -1,16 +1,18 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-int main(int argc, char *argv[])
-{
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#include "tensorclient.h"
 
-    QGuiApplication app(argc, argv);
+int main(int argc, char *argv[]) {
+  QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-    if (engine.rootObjects().isEmpty())
-        return -1;
+  QGuiApplication app(argc, argv);
+  qmlRegisterType<TensorClient>("TensorClient", 1, 0, "TensorClient");
 
-    return app.exec();
+  QQmlApplicationEngine engine;
+  engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+  if (engine.rootObjects().isEmpty())
+    return -1;
+
+  return app.exec();
 }

@@ -1,13 +1,19 @@
 #ifndef TENSORCLIENT_H
 #define TENSORCLIENT_H
 
-class TensorClient
+#include <QObject>
 
-{
+class TensorClient : public QObject {
+  Q_OBJECT
+
 public:
-    TensorClient() {}
+  explicit TensorClient(QObject *parent = nullptr);
 
-    void tryTensorFlow();
+  Q_INVOKABLE void tryTensorFlow();
+
+signals:
+
+public slots:
 };
 
 #endif // TENSORCLIENT_H

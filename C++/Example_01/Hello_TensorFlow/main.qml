@@ -3,11 +3,17 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
+import TensorClient 1.0
+
 
 Window {
     visible: true
     width: 500
     height: 550
+
+    TensorClient{
+        id: tensorClient
+    }
 
     Image {
         id: image
@@ -48,9 +54,7 @@ Window {
         }
 
         onClicked: {
-            // TODO: Trigger TensorFlow.
-            console.log("Triggering TensorFlow.")
-
+            tensorClient.tryTensorFlow()
         }
     }
 }
