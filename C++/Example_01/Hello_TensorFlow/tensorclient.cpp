@@ -1,9 +1,9 @@
 #include <QDebug>
 #include <QObject>
+// #include <tensorflow::ClientSession>
 
 #include "tensorclient.h"
 
-//#import <tensorflow/core/public/session.h>
 
 TensorClient::TensorClient(QObject *parent) : QObject(parent) {}
 
