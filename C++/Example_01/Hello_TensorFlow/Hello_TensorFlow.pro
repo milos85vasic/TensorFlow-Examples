@@ -29,7 +29,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-LIBS += -L"$$_PRO_FILE_PWD_/libs/" -ltensorflow
+# Make sure that you place libtensorflow.so in libs direcotry and that -I points to the path where TensorFlow header files are located.
+LIBS += -L"$$_PRO_FILE_PWD_/libs/" -ltensorflow -I/Users/milosvasic/Projects/Tensor-Flow/tensorflow/tensorflow/cc
 
 HEADERS += \
     tensorclient.h

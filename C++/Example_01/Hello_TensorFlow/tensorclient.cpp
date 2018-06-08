@@ -1,6 +1,5 @@
 #include <QDebug>
 #include <QObject>
-// #include <tensorflow::ClientSession>
 
 #include "tensorclient.h"
 
