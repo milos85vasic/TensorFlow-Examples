@@ -1,8 +1,7 @@
 #include <QDebug>
 #include <QObject>
 
-#include <framework/ops.h>
-#include <client/client_session.h>
+#include <tensorflow/cc/client/client_session.h>
 
 #include "tensorclient.h"
 
