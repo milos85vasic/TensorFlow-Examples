@@ -1,13 +1,13 @@
 #include <QDebug>
 #include <QObject>
 
-#include <tensorflow/cc/client/client_session.h>
-#include <tensorflow/cc/framework/ops.h>
-#include <tensorflow/core/framework/tensor.h>
+#include <tensorflow/core/platform/env.h>
+#include <tensorflow/core/public/session.h>
+// #include <tensorflow/tensorflow/core/lib/core/errors.h>
 
 #include "tensorclient.h"
 
-// FIXME: .//third_party/eigen3/unsupported/Eigen/CXX11/Tensor !!!
+
 
 TensorClient::TensorClient(QObject *parent) : QObject(parent) {}
 
