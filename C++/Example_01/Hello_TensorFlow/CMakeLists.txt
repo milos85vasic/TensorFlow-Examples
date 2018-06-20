@@ -14,7 +14,7 @@ find_package(TensorflowCC REQUIRED)
 add_executable(${PROJECT_NAME} "main.cpp" "qml.qrc")
 
 # target_link_libraries(example TensorflowCC::Static)
-target_link_libraries(example TensorflowCC::Shared)
+target_link_libraries(${PROJECT_NAME} TensorflowCC::Shared)
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick)
 
 set(SOURCES
@@ -22,9 +22,7 @@ set(SOURCES
     tensorclient.cpp
 )
 
-include_directory(.)
-
-
+include_directories(.)
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
