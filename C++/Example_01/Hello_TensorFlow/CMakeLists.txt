@@ -6,25 +6,19 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 find_package(TensorflowCC REQUIRED)
 
-add_executable(${PROJECT_NAME} "main.cpp" "qml.qrc")
+add_executable(${PROJECT_NAME} "main.cpp" "tensorclient.cpp" "qml.qrc")
 
 # target_link_libraries(example TensorflowCC::Static)
 target_link_libraries(${PROJECT_NAME} TensorflowCC::Shared)
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick)
 
-set(SOURCES
-    main.cpp
-    tensorclient.cpp
-)
 
-set(HEADERS
-    tensorclient.h
-)
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
